@@ -45,14 +45,43 @@
 # 3 2 1 -> no
 #
 # n = int(input(" введите длину :"))
-#
+
 # m = int(input("введите ширину :"))
-#
+
 # k = int(input(" введите количество долек"))
-#
+
 # if (n * m ) - k > 0  and ( k % n == 0 or k % m == 0 ):
 #     print( "yeeeesss : ")
 # else:
 #     print("noooy :")
 
 
+# data = [1, 2, 3, 5, 8, 15, 23, 38,]
+# res = list()
+
+# for i in data:
+#     if i % 2 == 0:
+#         res.append((i, i**2))
+
+# print(res)
+
+
+import random
+kust = int(input("введите количество кустов: "))
+berryes = list(random.randint(0, 10) for i in range(kust))
+result = []
+i = 0
+sum = 0
+
+print(berryes)
+
+while (i < kust):
+    if (i == kust - 1):
+        sum = berryes[i] + berryes[i - 1] + berryes[0]
+    else:
+        sum = berryes[i] + berryes[i - 1] + berryes[i + 1]
+        result.append(sum)
+        result.sort()
+    i += 1
+
+print(f"максимальное число ягод за одну итерацию {result[-1]}")

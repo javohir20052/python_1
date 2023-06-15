@@ -66,22 +66,29 @@
 # print(res)
 
 
-import random
-kust = int(input("введите количество кустов: "))
-berryes = list(random.randint(0, 10) for i in range(kust))
-result = []
-i = 0
-sum = 0
+# import random
+# kust = int(input("введите количество кустов: "))
+# berryes = list(random.randint(0, 10) for i in range(kust))
+# result = []
+# i = 0
+# sum = 0
 
-print(berryes)
+# print(berryes)
 
-while (i < kust):
-    if (i == kust - 1):
-        sum = berryes[i] + berryes[i - 1] + berryes[0]
-    else:
-        sum = berryes[i] + berryes[i - 1] + berryes[i + 1]
-        result.append(sum)
-        result.sort()
-    i += 1
+# while (i < kust):
+#     if (i == kust - 1):
+#         sum = berryes[i] + berryes[i - 1] + berryes[0]
+#     else:
+#         sum = berryes[i] + berryes[i - 1] + berryes[i + 1]
+#         result.append(sum)
+#         result.sort()
+#     i += 1
 
-print(f"максимальное число ягод за одну итерацию {result[-1]}")
+# print(f"максимальное число ягод за одну итерацию {result[-1]}")
+
+list=[-5,9,0,3,-1,-2,1,4,-2,10,2,0,-9,8,10,-9,0,-5,-5,7]
+min_number = int(input())
+max_number = int(input())
+for i in range(len(list)):
+    if min_number <= list[i] <= max_number:
+        print(i)
